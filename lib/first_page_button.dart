@@ -11,6 +11,8 @@ class FirstPageButton extends StatelessWidget {
   final String text;
   final Color buttonColor;
   final String particularImage;
+
+  final double imageWidth = 50;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
@@ -28,6 +30,7 @@ class FirstPageButton extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
+          SizedBox(width: imageWidth),
           Text(
             text,
             style: GoogleFonts.inter(
@@ -36,14 +39,11 @@ class FirstPageButton extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(
-            width: 50,
-          ),
           Opacity(
             opacity: .5,
             child: Image.asset(
               particularImage,
-              width: 50,
+              width: imageWidth,
             ),
           )
         ],

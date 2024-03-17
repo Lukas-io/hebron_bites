@@ -3,5 +3,5 @@ import 'package:hebron_bites/hebron_bites_app.dart';
 
 void main() {
   runApp(
-    HebronBitesApp() );
+    const HebronBitesApp(),);
 }
